@@ -1,5 +1,11 @@
-# Program #5: Course Info
-# Write a program that has the user input a bunch of course ID and course name pairs.  
-# For example a course ID could be "COS 2005" and the course name could be "Python Programming."   
-# Then ask the user for a subject (like "COS"). 
-# Finally, the program will display the ID and name of all the courses having that subject.
+#title:Course info
+#author: michael stoll
+#date: 3/17/2025
+all_relevant_courses = []
+number_of_courses = int(input('Input number of courses:'))
+filter_subject = str(input('Filtered to the course subject:'))
+for count in range(number_of_courses):
+    course_info = [str(input('Course ID:'))] + [str(input('Course name:'))]
+    if filter_subject in course_info[0]:
+        all_relevant_courses.append(course_info)
+print(all_relevant_courses)
